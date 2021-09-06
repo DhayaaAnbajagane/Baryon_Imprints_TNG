@@ -111,7 +111,7 @@ def Scaling_Relation(M200c, property, parameter, sim, z):
             z_val   = float(z_label[1:].replace('p','.'))
             a_val   = 1/(1 + z_val)
 
-            data[i] = np.loadtxt(cwd_path +'/Data/KLLR_Params_%s_%s_%s.txt'%(sim, property, z_label))
+            data[i] = np.loadtxt(cwd_path +'../Data/KLLR_Params_%s_%s_%s.txt'%(sim, property, z_label))
             data[i] = np.concatenate([data[i], np.ones([data[i].shape[0], 1])*a_val], axis = 1)
 
         data   = np.concatenate(data, axis = 0)
@@ -137,7 +137,7 @@ def Scaling_Relation(M200c, property, parameter, sim, z):
 
         input  = np.log10(M200c.flatten())
 
-        data = np.loadtxt(cwd_path +'/Data/KLLR_Params_%s_%s_z0p00.txt'%(sim, property))
+        data = np.loadtxt(cwd_path + '../Data/KLLR_Params_%s_%s_z0p00.txt'%(sim, property))
         data = np.concatenate([data, np.ones([data.shape[0], 1])], axis = 1)
 
         index  = parameter_to_index[parameter]
@@ -250,7 +250,7 @@ def Correlation(M200c, property1, property2, sim, z):
             z_val   = float(z_label[1:].replace('p','.'))
             a_val   = 1/(1 + z_val)
 
-            data[i] = np.loadtxt(cwd_path +'/Data/KLLR_Corr_%s_%s_%s_%s.txt'%(sim, property1, property2, z_label))
+            data[i] = np.loadtxt(cwd_path +'../Data/KLLR_Corr_%s_%s_%s_%s.txt'%(sim, property1, property2, z_label))
             data[i] = np.concatenate([data[i], np.ones([data[i].shape[0], 1])*a_val], axis = 1)
 
         data   = np.concatenate(data, axis = 0)
@@ -265,7 +265,7 @@ def Correlation(M200c, property1, property2, sim, z):
 
         input  = np.log10(M200c.flatten())
 
-        data = np.loadtxt(cwd_path +'/Data/KLLR_Corr_%s_%s_%s_z0p00.txt'%(sim, property1, property2))
+        data = np.loadtxt(cwd_path +'../Data/KLLR_Corr_%s_%s_%s_z0p00.txt'%(sim, property1, property2))
         data = np.concatenate([data, np.ones([data.shape[0], 1])], axis = 1)
 
         output = np.zeros([M200c.size, 7])
