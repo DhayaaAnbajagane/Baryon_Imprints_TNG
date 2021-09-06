@@ -16,6 +16,10 @@ The following properties are available:
 ## QUICKSTART
 
 ```
+
+import Interpolator
+import numpy as np
+
 M200c = 10**np.linspace(9, 14.5, 100)
 
 mean = Interpolator.Scaling_Relation(M200c, property = 'c200c', parameter = 'mean', sim = 'TNG300', z = 0.45)
