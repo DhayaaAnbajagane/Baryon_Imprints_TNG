@@ -20,11 +20,15 @@ The following properties are available:
 import Interpolator
 import numpy as np
 
+print("List of available properties is " + str(Interpolator.avail_properties))
+print("List of available sims is " + str(Interpolator.avail_sims))
+print("List of available scaling parameters is " + str(Interpolator.avail_params))
+
 M200c = 10**np.linspace(9, 14.5, 100)
 
 mean = Interpolator.Scaling_Relation(M200c, property = 'c200c', parameter = 'mean', sim = 'TNG300', z = 0.45)
 corr = Interpolator.Correlation(M200c, property1 = 'c200c', property2 = 'sigma_DM_3D',  sim = 'TNG100', z = 0.45)
-cov  = Interpolator.Covariance(M200c, property1 = 'c200c', property2 = 'sigma_DM_3D',  sim = 'TNG50', z = 0.45)
+cov  = Interpolator.Covariance(M200c,  property1 = 'c200c', property2 = 'sigma_DM_3D',  sim = 'TNG50',  z = 0.45)
 
 ```
 
