@@ -18,7 +18,7 @@ The following properties are available:
 ```
 
 import sys
-sys.path.append(<path to 'Baryon_Imprints_TNG'>)
+sys.path.append("<path to 'Baryon_Imprints_TNG'>/Baryon_Imprints_TNG")
 
 import Interpolator
 import numpy as np
