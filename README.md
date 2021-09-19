@@ -1,6 +1,6 @@
 # Baryon Imprints on Dark Matter Scaling Relations from TNG
 
-This repository hosts both the data and corresponding interpolation scripts for the scaling relation parameters of halos in the TNG50/100/300 runs (both dark matter only and full physics variants) from redshifts 0 < z < 11.98. The properties and their corresponding scaling parameters are computed as described in Anbajagane et. al, in prep. **Citation to this publication is requested if these scaling parameters are used.**
+This repository hosts both the data and corresponding interpolation scripts for the scaling relation parameters of halos in the TNG50/100/300 runs (both dark matter only and full physics variants) from redshifts 0 < z < 11.98. The properties and their corresponding scaling parameters are computed as described in [Anbajagane, Evrard & Farahi 2021](https://arxiv.org/abs/2109.02713). **Citation to this publication is requested if these scaling parameters are used.**
 
 The following properties are available:
 
